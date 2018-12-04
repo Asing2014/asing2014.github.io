@@ -45,6 +45,15 @@
 				//赋值
 				windowWidth = document.body.clientWidth - 50;
 				windowHeight = document.body.clientHeight>0?document.body.clientHeight:600 - 50;
+				if(window.innerHeight)
+				{
+					windowHeight = window.innerHeight-50;
+				}
+				if(document.documentElement&&document.documentElement.clientHeight&&document.documentElement.clientWidth)
+				{
+					windowWidth = document.documentElement.clientWidth - 50;
+					windowHeight = document.documentElement.clientHeight - 50;
+				}
 				for(var i=0;i<99;i++)
 				{
 					createSnow();
