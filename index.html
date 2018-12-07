@@ -47,8 +47,8 @@
         <ul>
           <li><a href="http://blog.notelife.net">首页</a></li>
           <li><a href="#">{{it}}</a></li>
-          <li><a href="#">投资理财</a></li>
-          <li><a href="#">医疗信息化</a></li>
+          <li><a href="#">{{finance}}</a></li>
+          <li><a href="#">{{his}}</a></li>
         </ul>
       </div>
       <div id="content"></div>
@@ -58,7 +58,9 @@
         var app = new Vue({
           el:"#app",
           data:{
-            it:"信息技术"
+            it:"信息技术",
+            finance:"金融科技",
+            his:"医疗信息化"
           }
         });
       </script>
