@@ -31,14 +31,16 @@
     <center><h1 id="value">326</h1><center>
     <script type="text/javascript">
       if(hq_str_B1905){
-        document.getElementById("value").innerText = hq_str_B1905;
-        b= hq_str_B1905;
+        
+        b= hq_str_B1905.split(',')[7];
       }
       if(hq_str_M1905){
-        document.getElementById("value").innerText = hq_str_B1905;
-        m= hq_str_M1905;
+        
+        m= hq_str_M1905.split(',')[7];
       }
-      
+      if(b&&m){
+        document.getElementById("value").innerText = eval(b-m);
+      }
     </script>
   </body>
 </html>
