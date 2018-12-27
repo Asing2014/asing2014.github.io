@@ -9,22 +9,26 @@
         color:#FFFFFF;
       }
     </style>
+    <script type="text/javascript">
+      var m;
+      var b;
+      function initFirst(jsondata)
+      {
+        b = jsondata;
+      }
+      function initSecond(jsondata)
+      {
+        m = jsondata;
+      }
+    </script>
+    <script src="https://hq.sinajs.cn/list=B1905?callback=initFirst"/>
+    <script src="https://hq.sinajs.cn/list=M1905?callback=initSecond"/>
   </head>
   <body>
     <center><h1 id="value">326</h1><center>
     <script type="text/javascript">
-      var xmlhttp = new XMLHttpRequest();
-      var str1;
-      xmlhttp.open("get","https://hq.sinajs.cn/list=B1905",true);
-      xmlhttp.send();
-      xmlhttp.open("get","https://hq.sinajs.cn/list=M1905",true);
-      xmlhttp.send();
-      if(xmlhttp){
-        xmlhttp.onreadystatechange=function(){
-          if(xmlhttp.readyState==4&&xmlhttp.status==200){
-            alert(xmlhttp.responseText);
-          }
-        }
+      if(m){
+        document.getElementById("value").innerText = m;
       }
       
     </script>
