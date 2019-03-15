@@ -19,6 +19,7 @@
       var m,m1909;
       var b,b1909;
       var y,y1909;
+	  var a1909;
 	  var sh600239,sz002005,sh600750;
       function initFirst(jsondata)
       {
@@ -40,6 +41,8 @@
     <script src="https://hq.sinajs.cn/list=M1909">
     </script>
     <script src="https://hq.sinajs.cn/list=Y1909">
+    </script>
+	<script src="https://hq.sinajs.cn/list=A1909">
     </script>
 	<script src="https://hq.sinajs.cn/list=sh600750">
     </script>
@@ -72,6 +75,10 @@
       if(hq_str_B1909){
         
         b1909= hq_str_B1909.split(',')[6];
+      }
+	  if(hq_str_A1909){
+        
+        a1909= hq_str_A1909.split(',')[6];
       }
       if(hq_str_M1909){
         
@@ -109,11 +116,8 @@
 	  if(sh600750){
 		document.getElementById("value750").innerText = sh600750;
 	  }
-	  if(sh600239){
-		document.getElementById("value239").innerText = sh600239;
-	  }
-	  if(sz002005){
-		document.getElementById("value2005").innerText = sz002005;
+	  if(a1909){
+		document.getElementById("value239").innerText = a1909;
 	  }
     </script>
   </body>
