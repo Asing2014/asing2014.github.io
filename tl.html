@@ -16,6 +16,7 @@
       }
     </style>
     <script type="text/javascript">
+    	var a;
       var m,m1909;
       var b,b1909;
       var y,y1909;
@@ -29,6 +30,8 @@
       {
         m = jsondata;
       }
+    </script>
+    <script src="https://hq.sinajs.cn/list=A1909">
     </script>
     <script src="https://hq.sinajs.cn/list=B1905">
     </script>
@@ -48,7 +51,7 @@
     </script>
     <script src="https://hq.sinajs.cn/list=sh600239">
     </script>
-    <script src="https://hq.sinajs.cn/list=sh600240">
+    <script src="https://hq.sinajs.cn/list=sh000001">
 	</script>
   </head>
   <body>
@@ -60,6 +63,10 @@
 		<center><h3 id="value239">326</h3><center>
 		<center><h3 id="value2005">326</h3><center>
     <script type="text/javascript">
+    	if(hq_str_A1909){
+        
+        a= hq_str_A1909.split(',')[6];
+      }
       if(hq_str_B1905){
         
         b= hq_str_B1905.split(',')[6];
@@ -96,12 +103,12 @@
         
         sh600239= hq_str_sh600239.split(',')[6];
       }
-      if(hq_str_sh600240){
+      if(hq_str_sh000001){
         
-        sz002005= hq_str_sh600240.split(',')[6];
+        sz002005= hq_str_sh000001.split(',')[6];
       }
-      if(b&&m){
-        document.getElementById("value").innerText = eval(b-m);
+      if(a&&b1909){
+        document.getElementById("value").innerText = eval(a-b1909);
       }
 	  if(b1909&&m1909){
         document.getElementById("bmvalue1909").innerText = eval(b1909-m1909);
@@ -116,8 +123,11 @@
 	  if(sh600750){
 		document.getElementById("value750").innerText = sh600750;
 	  }
+	  if(sh000001){
+		document.getElementById("value2005").innerText = sh000001;
 	  if(a1909&&m1909){
 		document.getElementById("value239").innerText = eval(a1909-m1909);
+	  }
 	  }
     </script>
   </body>
